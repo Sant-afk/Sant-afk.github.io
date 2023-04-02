@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/home.jpg">
+    <link rel="stylesheet" href="../css/contactStyle.css">
+    <script src="https://kit.fontawesome.com/31c609078d.js" crossorigin="anonymous"></script>
+    <title>Sant Page</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../img/home.jpg" alt="Logo foto de perfil">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn" id="claro"><button>Modo claro</button></a>
+
+        <a href="#" class="menu" onclick="openNav()"><button>Menu</button></a>
+
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="#" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="../index.html">Home</a>
+                <a href="./Contact.html">Contact</a>
+                <a href="./projects.html">Projects</a>
+            </div>
+        </div>
+    </header>
+    <section class="box">
+        <h1>Contactame...</h1>
+    </section>
+    <section class="box2">
+            <ul>
+                <li>
+                    <strong>Correo:</strong> zjr0011q@gmail.com
+                </li>
+                <br>
+                <li>
+                    <strong>Usuario de discord:</strong> Sant ⁰⁹¹¹#9515
+                </li>
+                <br>
+                <li>
+                    <strong>Numero de telefono:</strong> +57 314 1231243 (EJEMPLO)
+                </li>
+            </ul>
+    </section>
+    <section class="box">
+        <h1>Redes...</h1>
+    </section>
+    <section class="box3">
+        <ul>
+            <li>
+                <a href="https://twitter.com/Sant_cg_" target="blank" class="fa-brands fa-twitter"></a>
+                <a href="https://www.facebook.com/profile.php?id=100086645980572" target="blank"class="fa-brands fa-facebook"></a>
+                <a href="https://www.youtube.com/channel/UCi60JKb0AFp4whN-u98wf1A" target="blank"class="fa-brands fa-youtube"></a>
+                <a href="https://discord.gg/tHhNxa9p8s" target="blank"class="fa-brands fa-discord"></a>
+                <a href="https://www.tiktok.com/@santiagocg..._" target="blank"class="fa-brands fa-tiktok"></a>
+                <a href="https://github.com/Sant-afk" target="blank"class="fa-brands fa-github"></a>
+                <a href="https://www.instagram.com/santiagocs_0/" target="blank"class="fa-brands fa-instagram"></a>
+            </li>
+        </ul>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const blight = document.querySelector('#claro');
+        const body = document.querySelector("body")
+
+        load()
+
+        blight.addEventListener("click", e => {
+            body.classList.toggle("claro")
+            store(body.classList.contains("claro"))
+        });
+        function load() {
+            const modoclaro = localStorage.getItem("claro")
+            if(!modoclaro) {
+                store("false")
+            } else if(modoclaro == "true") {
+                body.classList.add("claro")
+            }
+        } 
+
+        function store(value) {
+            localStorage.setItem("claro", value)
+        }
+
+    </script>
+    <script src="../js/index.js"></script>
+</body>
+</html>
